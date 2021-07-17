@@ -20,5 +20,11 @@ class DatabaseSeeder extends Seeder
             'password' => password_hash('admin', PASSWORD_DEFAULT),
             'active' => '1'
         ]);
+        DB::table('tbl_user') -> insert([
+            'username' => 'admin',
+            'tipe' => 'super-admin',
+            'password' => password_hash('admin', PASSWORD_DEFAULT),
+            'active' => '1'
+        ]);
     }
 }
